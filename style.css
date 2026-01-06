@@ -1,0 +1,685 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #39BCC8;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #f4f4f4;
+    color: #39BCC8;
+}
+
+nav ul li a.active {
+    background-color: #f4f4f4;
+    font-weight: 600;
+    color: #39BCC8;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.welcome-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    color: #39BCC8;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+}
+
+.guide-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.guide-section h2 {
+    color: #39BCC8;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #39BCC8;
+    padding-bottom: 0.5rem;
+}
+
+.guide-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.guide-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #39BCC8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-number {
+    background: #39BCC8;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.guide-card h4 {
+    color: #39BCC8;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.guide-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.transaksi-section {
+    background: white;
+    padding: 2rem 5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.transaksi-section h2 {
+    color: #39BCC8;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.transaksi-section p {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #39BCC8;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.3rem;
+    min-height: 20px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background: #39BCC8;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.link-section {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-link{
+    background: #39BCC8;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.daftar-section {
+    background: white;
+    padding: 2rem 5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.daftar-section h2 {
+    color: #39BCC8;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.daftar-section p {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+}
+
+.btn-back {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+table thead {
+    background: #39BCC8;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.badge-pinjam {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge-kembali {
+    background: #e8f5e9;
+    color: #39BCC8;
+}
+
+.profil-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profil-section h2 {
+    color: #39BCC8;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #39BCC8;
+    padding-bottom: 0.5rem;
+}
+
+.profil-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profil-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #39BCC8;
+}
+
+.profil-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.profil-card p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+}
+
+.login-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: #39BCC8;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+footer {
+    background: #39BCC8;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo-section {
+        gap: 10px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 40px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 1.5rem 0;
+    }
+
+    .welcome-section,
+    .guide-section,
+    .form-container,
+    .profil-section {
+        padding: 1.5rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .welcome-section p {
+        font-size: 1rem;
+    }
+
+    .guide-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .guide-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .transaksi-section,
+    .daftar-section {
+        padding: 1.5rem 2rem;
+    }
+
+    .transaksi-section h2,
+    .daftar-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-actions,
+    .link-section {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-back,
+    .btn-link {
+        width: 100%;
+    }
+
+    .btn-link {
+        font-size: 1.1rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .login-container {
+        padding: 2rem;
+        margin: 0 15px;
+    }
+
+    .login-header h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 0.8rem 0;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 30px;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li {
+        flex: 1;
+    }
+
+    nav ul li a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    main {
+        padding: 1rem 0;
+    }
+
+    .welcome-section,
+    .guide-section,
+    .form-container,
+    .profil-section,
+    .transaksi-section,
+    .daftar-section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .welcome-section h2,
+    .transaksi-section h2,
+    .daftar-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .welcome-section p,
+    .transaksi-section p,
+    .daftar-section p {
+        font-size: 0.95rem;
+    }
+
+    .guide-section h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .guide-cards {
+        gap: 0.8rem;
+    }
+
+    .guide-card {
+        padding: 1rem;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .guide-card h4 {
+        font-size: 1rem;
+    }
+
+    .guide-card p {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .btn-primary,
+    .btn-back,
+    .btn-link {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-link {
+        font-size: 1rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    table th,
+    table td {
+        padding: 6px;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    .profil-card {
+        padding: 1rem;
+    }
+
+    .profil-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .profil-card p {
+        font-size: 0.9rem;
+    }
+
+    .login-container {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+
+    .login-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .login-header p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header h1 {
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+
+    .welcome-section h2,
+    .transaksi-section h2,
+    .daftar-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .guide-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .login-header h2 {
+        font-size: 1.2rem;
+    }
+}

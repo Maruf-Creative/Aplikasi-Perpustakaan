@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="image/White.png" alt="Logo Perpustakaan" class="logo">
+                    <h1>Aplikasi Perpustakaan</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="transaksi.html"class="active">Transaksi</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+<body>
+    <main class="container">
+        <section class="transaksi-section">
+            <h2>Form Transaksi Peminjaman Buku</h2>
+        </section>
+
+        <section>
+            <div class="form-container">
+                <form id="transaksiForm">
+                    <div class="form-group">
+                        <label for="namaPeminjam">Nama Peminjam:</label>
+                        <input type="text" id="namaPeminjam" name="namaPeminjam" placeholder="Masukkan nama peminjam">
+                        <span class="error-message" id="errorNama"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="judulBuku">Judul Buku:</label>
+                        <input type="text" id="judulBuku" name="judulBuku" placeholder="Masukkan judul buku">
+                        <span class="error-message" id="errorJudul"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jumlahBuku">Jumlah Buku:</label>
+                        <input type="number" id="jumlahBuku" name="jumlahBuku" min="1" placeholder="Masukkan jumlah buku">
+                        <span class="error-message" id="errorJumlah"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggalPinjam">Tanggal Peminjaman:</label>
+                        <input type="date" id="tanggalPinjam" name="tanggalPinjam">
+                        <span class="error-message" id="errorTanggal"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kategori">Kategori Transaksi:</label>
+                        <select id="kategori" name="kategori">
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="Peminjaman">Peminjaman</option>
+                            <option value="Pengembalian">Pengembalian</option>
+                        </select>
+                        <span class="error-message" id="errorKategori"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Simpan Transaksi</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="link-section">
+                <a href="daftar_transaksi.html" class="btn-link">Lihat Daftar Transaksi</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Aplikasi Perpustakaan. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

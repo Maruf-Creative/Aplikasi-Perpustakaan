@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="image/White.png" alt="Logo Perpustakaan" class="logo">
+                    <h1>Aplikasi Perpustakaan</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="transaksi.html">Transaksi</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="daftar-section">
+            <div class="section-header">
+                <h2>Daftar Transaksi Perpustakaan</h2>
+                <a href="transaksi.html" class="btn-back">← Kembali ke Form Transaksi</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="table-container">
+                <table id="transaksiTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Peminjam</th>
+                            <th>Judul Buku</th>
+                            <th>Jumlah</th>
+                            <th>Tanggal</th>
+                            <th>Kategori</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ahmad Fadli</td>
+                            <td>Pemrograman Web HTML5</td>
+                            <td>2</td>
+                            <td>2026-01-15</td>
+                            <td><span class="badge badge-pinjam">Peminjaman</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Siti Nurhaliza</td>
+                            <td>Database MySQL</td>
+                            <td>1</td>
+                            <td>2026-01-16</td>
+                            <td><span class="badge badge-kembali">Pengembalian</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Budi Santoso</td>
+                            <td>JavaScript Modern</td>
+                            <td>3</td>
+                            <td>2026-01-17</td>
+                            <td><span class="badge badge-pinjam">Peminjaman</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Dewi Lestari</td>
+                            <td>Algoritma dan Struktur Data</td>
+                            <td>1</td>
+                            <td>2026-01-18</td>
+                            <td><span class="badge badge-pinjam">Peminjaman</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Eko Prasetyo</td>
+                            <td>Desain UI/UX</td>
+                            <td>2</td>
+                            <td>2026-01-19</td>
+                            <td><span class="badge badge-kembali">Pengembalian</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+     <footer>
+        <div class="container">
+            <p>&copy; 2026 Aplikasi Perpustakaan. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
